@@ -1,0 +1,70 @@
+/* Base styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    margin: 0;
+  }
+  
+  /* Title */
+  h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Container for converter */
+  .converter {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  /* Input styling */
+  input {
+    padding: 12px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Output display */
+  #output {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #34495e;
+  }
+  
