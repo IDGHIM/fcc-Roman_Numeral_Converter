@@ -1,26 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="favicon/favicon/site.webmanifest" />
-  <title>Roman Numeral Converter</title>
-  <link rel="stylesheet" href="styles.css">
+    <title>Convertisseur de Chiffres Romains</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Roman Numeral Converter</h1>
-  <div class="converter">
-    <!-- Champ de saisie avec l'ID requis -->
-    <input id="number" type="number" min="1" placeholder="Enter a number between 1 and 3999" />
-    <!-- Bouton avec l'ID requis -->
-    <button id="convert-btn">Convert</button>
-    <!-- Élément de sortie avec l'ID requis -->
-    <p id="output"></p>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>CONVERTISSEUR ROMAIN</h1>
+            <p>Transformez les nombres en chiffres de l'Empire</p>
+        </header>
+
+        <!-- Section principale -->
+        <div class="main-section">
+            <!-- Panel de conversion -->
+            <div class="conversion-panel">
+                <!-- Contrôles -->
+                <div class="controls">
+                    <div class="mode-indicator" id="mode-indicator">
+                        Entrez un nombre
+                    </div>
+                    
+                    <div class="input-group">
+                        <input 
+                            type="number" 
+                            id="number" 
+                            placeholder="Ex: 1994"
+                            min="1"
+                            max="3999"
+                        >
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-primary" id="convert-btn">
+                            ⚡ Convertir
+                        </button>
+                        <button class="btn btn-secondary" id="toggle-btn">
+                            🔄 Mode: Arabe → Romain
+                        </button>
+                    </div>
+
+                    <div class="utility-buttons">
+                        <button class="btn btn-secondary btn-small" id="clear-btn">
+                            🗑️ Effacer
+                        </button>
+                        <button class="btn btn-secondary btn-small" id="reset-btn">
+                            🔄 Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Résultat -->
+                <div class="result-section">
+                    <div class="output" id="output"></div>
+                    
+                    <!-- Explication détaillée -->
+                    <div class="explanation" id="explanation"></div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Historique des conversions -->
+                <div class="history-panel">
+                    <h3>📜 Historique</h3>
+                    <div class="history-list" id="history-list">
+                        <div class="history-empty">Aucune conversion effectuée</div>
+                    </div>
+                </div>
+
+                <!-- Faits historiques -->
+                <div class="facts-panel">
+                    <h3>🏛️ Le Saviez-Vous ?</h3>
+                    <div id="random-fact">
+                        <div class="fact-content">
+                            📚 Les chiffres romains étaient utilisés dans l'Empire romain depuis le VIIIe siècle avant J.-C.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raccourcis clavier -->
+                <div class="facts-panel">
+                    <h3>⌨️ Raccourcis</h3>
+                    <div class="fact-content">
+                        <strong>Entrée:</strong> Convertir<br>
+                        <strong>Échap:</strong> Effacer<br>
+                        <strong>Ctrl+R:</strong> Reset<br>
+                        <strong>Ctrl+M:</strong> Changer mode
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
